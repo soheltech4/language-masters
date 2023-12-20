@@ -47,7 +47,7 @@ const SignUp = () => {
                 console.log(loggedUser)
 
                 const seveUser = {name, email }
-                fetch('http://localhost:5000/users', {
+                fetch('https://language-masters-server.vercel.app/users', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'

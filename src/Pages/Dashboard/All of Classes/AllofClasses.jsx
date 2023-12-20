@@ -6,7 +6,7 @@ const AllofClasses = () => {
     const [Classes, setClasses] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/allclass')
+        fetch('https://language-masters-server.vercel.app/allclass')
             .then(res => res.json())
             .then(data => {
                 setClasses(data);
@@ -25,7 +25,7 @@ const AllofClasses = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/alclass/${item?._id}`, {
+                fetch(`https://language-masters-server.vercel.app/alclass/${item?._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

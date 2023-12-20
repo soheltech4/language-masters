@@ -30,12 +30,12 @@ export const router = createBrowserRouter([
       {
         path: '/allclass/:_id',
         element: <ClassDetails></ClassDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/allclass/${params._id}`)
+        loader: ({ params }) => fetch(`https://language-masters-server.vercel.app/allclass/${params._id}`)
       },
       {
         path: '/allinstructor/:_id',
         element: <InstructorDetials></InstructorDetials>,
-        loader: ({ params }) => fetch(`http://localhost:5000/allinstructor/${params._id}`)
+        loader: ({ params }) => fetch(`https://language-masters-server.vercel.app/allinstructor/${params._id}`)
       },
       {
         path: "/login",

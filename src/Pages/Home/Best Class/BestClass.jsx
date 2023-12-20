@@ -44,7 +44,7 @@ const BestClass = () => {
     };
 
     useEffect(() => {
-        fetch('http://localhost:5000/allclass')
+        fetch('https://language-masters-server.vercel.app/allclass')
             .then(res => res.json())
             .then(data => setBestClass(data))
     }, [])

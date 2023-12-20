@@ -18,7 +18,7 @@ const Button = ({ title, item }) => {
         if (user && user?.email) {
             const classItem = { itemId: _id, Title, InstructorName, Thumbnail, price, Language, email: user?.email }
             console.log(classItem)
-            fetch('http://localhost:5000/carts', {
+            fetch('https://language-masters-server.vercel.app/carts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

@@ -11,7 +11,7 @@ const AllClass = () => {
     const [ShowByGrid, setShowByGrid] = useState(true)
 
     useEffect(() => {
-        fetch('http://localhost:5000/allclass')
+        fetch('https://language-masters-server.vercel.app/allclass')
             .then(res => res.json())
             .then(data => {
                 setItems(data);

@@ -27,7 +27,7 @@ const AddClass = () => {
                     const { Title, Description, InstructorEmail, InstructorName, price, Rating, Seat } = data;
                     const newClass = {Title, Description, InstructorEmail, InstructorName, price: parseFloat(price), Rating: parseFloat(Rating), Seat: parseFloat(Seat), Thumbnail };
                     console.log(newClass);
-                    fetch('http://localhost:5000/allclass', {
+                    fetch('https://language-masters-server.vercel.app/allclass', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
