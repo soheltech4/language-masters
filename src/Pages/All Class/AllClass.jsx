@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { FaSistrix, FaTh, FaThList } from 'react-icons/fa';
 import ShowAllClass from './ShowAllClass';
 import ShowClassList from './ShowClassList';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const AllClass = () => {
     const [items, setItems] = useState([]);
@@ -9,10 +10,16 @@ const AllClass = () => {
     const [filteredItems, setFilteredItems] = useState([]);
     const [ShowByList, setShowByList] = useState(false)
     const [ShowByGrid, setShowByGrid] = useState(true)
+    const {loading} = useContext(AuthContext)
 
     useEffect(() => {
         fetch('https://language-masters-server.vercel.app/allclass')
-            .then(res => res.json())
+            .then(res => {
+                if(!res.ok){
+                    throw new Error('Network Response was no ok')
+                }
+                return res.json()
+            })
             .then(data => {
                 setItems(data);
                 setFilteredItems(data);
@@ -36,7 +43,6 @@ const AllClass = () => {
         setShowByList(false)
         setShowByGrid(true)
     }
-    console.log(ShowByList, ShowByGrid)
 
     return (
         <div className='md:flex p-5 pt-24'>
@@ -68,9 +74,12 @@ const AllClass = () => {
                         {filteredItems.length === 0 ?
                             (
                                 <p className='text-lg text-red-600 text-center'>No Class found</p>
-                            ) : (filteredItems.map(item => (<ShowAllClass key={item?._id} item={item} />
-                            ))
-                            )}
+                            ) 
+                            : 
+                            (
+                                filteredItems.map(item => (<ShowAllClass key={item?._id} item={item} />))
+                            )
+                        }
                     </div>
                 </>
                 :

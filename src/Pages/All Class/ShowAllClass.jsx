@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 
 const ShowAllClass = ({ item }) => {
     const { _id, Title, InstructorName, Thumbnail, Enroll, Seat, Rating: itemRating } = item
-    console.log(item)
     return (
         <div className='' alt="Click for show details">
             <div className="w-auto glass card">

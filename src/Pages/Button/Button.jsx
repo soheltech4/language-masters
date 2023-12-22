@@ -59,16 +59,16 @@ const Button = ({ title, item }) => {
         <div>
             {Seat - Enroll == 0 ?
                 <>
-                    <p href="#_" class="relative inline-flex items-center px-3 py-2 overflow-hidden text-lg font-medium text-gray-400 border-2 border-gray-400 rounded-full group ">
-                        <span class="relative text-xs">{title}</span>
+                    <p href="#_" className="relative inline-flex items-center px-3 py-2 overflow-hidden text-lg font-medium text-gray-400 border-2 border-gray-400 rounded-full group ">
+                        <span className="relative text-xs">{title}</span>
                     </p>                        </>
                 :
                 <>
-                    <button onClick={() => { handleAddCart(item) }} href="#_" class="relative inline-flex items-center px-3 py-2 overflow-hidden text-lg font-medium text-purple-600 border-2 border-purple-600 rounded-full hover:text-white group hover:bg-gray-50">
-                        <span class="absolute left-0 block w-full h-0 transition-all bg-purple-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
-                        <span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+                    <button onClick={() => { handleAddCart(item) }} href="#_" className="relative inline-flex items-center px-3 py-2 overflow-hidden text-lg font-medium text-purple-600 border-2 border-purple-600 rounded-full hover:text-white group hover:bg-gray-50">
+                        <span className="absolute left-0 block w-full h-0 transition-all bg-purple-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+                        <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
                         </span>
-                        <span class="relative text-xs">{title}</span>
+                        <span className="relative text-xs">{title}</span>
                     </button>
                 </>
             }

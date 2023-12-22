@@ -8,8 +8,8 @@ const InstructorDetailsShow = ({ instructor }) => {
     const { bio, email, experience_years, name, phone, photo, rating, _id, courses_taught } = instructor
 
     return (
-        <div className='md:p-20 p-10 pt-20 rounded-lg '>
-            <div className="bg-gray-500 p-10  bg-opacity-25 md:p-20 rounded-lg">
+        <div className='md:p-10 p-3 pt-10 rounded-lg '>
+            <div className="bg-gray-500 p-3  bg-opacity-25 md:p-10 rounded-lg">
                 <div className="md:flex md:gap-20 md:flex-col lg:flex-row">
                     <img src={photo} className="md:w-80 rounded-lg shadow-md" />
                     <div className=''>
@@ -29,7 +29,7 @@ const InstructorDetailsShow = ({ instructor }) => {
                         <p className="md:py-2 w-full md:my-0 my-2 md:text-xl ">Email : <span className='font-bold'>{email}</span></p>
                         <div className='mt-5 gap-5 md:pt-5'>
                             <h1 className='md:py-2 w-full md:my-0 my-2 md:text-xl font-bold'>Course Taught</h1>
-                        {courses_taught.map(course=> <li className='md:text-lg'>{course}</li> )}
+                        {courses_taught.map((course, indexOf) => <li key={indexOf} className='md:text-lg'>{course}</li> )}
                         </div>
                     </div>
                 </div>
