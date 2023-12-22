@@ -10,8 +10,8 @@ const ClassDetailsShow = ({ item }) => {
     const { _id, Title, InstructorName, InstructorPhoto, Thumbnail, Enroll, Seat, price, Description, Rating: classRating, Reviews } = item
 
     return (
-        <div className='md:p-10 p-5 pt-20 rounded-lg '>
-            <div className="bg-gray-200  bg-opacity-25 p-3 md:p-10 rounded-lg">
+        <div className='md:p-5 p-2 pt-20 rounded-lg '>
+            <div className="bg-gray-200  bg-opacity-25 p-2 md:p-5 rounded-lg">
                 <div className="md:flex md:gap-20 md:flex-col lg:flex-row">
                     <img src={Thumbnail} className="md:w-1/2 rounded-lg shadow-md" />
                     <div className='md:w-1/2'>

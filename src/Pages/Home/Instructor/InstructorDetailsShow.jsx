@@ -8,8 +8,8 @@ const InstructorDetailsShow = ({ instructor }) => {
     const { bio, email, experience_years, name, phone, photo, rating, _id, courses_taught } = instructor
 
     return (
-        <div className='md:p-10 p-3 pt-10 rounded-lg '>
-            <div className="bg-gray-500 p-3  bg-opacity-25 md:p-10 rounded-lg">
+        <div className='md:p-5 p-2 pt-10 rounded-lg '>
+            <div className="bg-gray-500 p-2 bg-opacity-25 md:p-5 rounded-lg">
                 <div className="md:flex md:gap-20 md:flex-col lg:flex-row">
                     <img src={photo} className="md:w-80 rounded-lg shadow-md" />
                     <div className=''>

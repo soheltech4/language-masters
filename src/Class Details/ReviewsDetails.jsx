@@ -6,7 +6,7 @@ import { FaUserCircle } from 'react-icons/fa';
 const ReviewsDetails = ({ Review }) => {
     const { Name, Image, Rating: ReviewerRating, Comment } = Review
     return (
-        <div className='p-3 '>
+        <div className='p-2'>
             <div className='p-5 flex gap-5 rounded-lg bg-purple-100 bg-opacity-30 shadow-md'>
                 <div className=''>
                     <p><FaUserCircle className='text-5xl ml-4 mb-2 '></FaUserCircle></p>
